@@ -104,7 +104,7 @@ async function getAIResponse(input) {
   try {
     console.log("Sending to AI:", input);
  
-    const res = await fetch("https://noorai-kpwz.onrender.com", {
+    const res = await fetch("https://noorai-kpwz.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: input })
