@@ -104,7 +104,7 @@ async function getAIResponse(input) {
   try {
     console.log("Sending to AI:", input);
  
-    const res = await fetch("http://localhost:3000/chat", {
+    const res = await fetch("https://noorai-kpwz.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: input })
@@ -155,7 +155,7 @@ recognition.onresult = async (event) => {
   recognition.stop();
  
   const reply = await getAIResponse(text);
-  statusText.innerText = "Kevin: " + reply;
+  statusText.innerText = "Noor: " + reply;
  
   setTimeout(() => speak(reply), 500);
 };
